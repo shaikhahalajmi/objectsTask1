@@ -72,28 +72,13 @@ const myObject2 = {
   city: "Kuwait",
 };
 
-function hasValues(x){
-  if(x.city){
-      console.log("has values");
-      return true;
-  }
-      else{
-          console.log("no properties are undefined or null");
-          return false;
-      }
-  
-}
-
-
-hasValues(myObject);
-hasValues(myObject2);
 
 //another way
 function hasValues1(x){
 
 for(let key in x)
 {
-  if(x[key] != null ){
+  if(x[key] != null || x[key] != undefined ){
     console.log(`${key} has value : ${x[key]}`);
     return true;
   }
